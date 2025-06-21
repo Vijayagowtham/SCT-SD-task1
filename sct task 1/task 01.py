@@ -55,11 +55,11 @@ def convert_temperature(value, from_scale, to_scale):
 
 # Interactive prompt
 def main():
-    print("🌡️ Welcome to the Temperature Converter!")
+    print(" Welcome to the Temperature Converter!")
     try:
         value = float(input("Enter the temperature value (e.g., 25): "))
     except ValueError:
-        print("❌ Invalid input. Please enter a numeric value for the temperature.")
+        print(" Invalid input. Please enter a numeric value for the temperature.")
         return
 
     from_scale = input("Convert from (Celsius/C, Fahrenheit/F, Kelvin/K): ")
@@ -67,9 +67,9 @@ def main():
 
     try:
         result = convert_temperature(value, from_scale, to_scale)
-        print(f"\n✅ {value:.2f}° {from_scale.capitalize()} is equal to {result:.2f}° {to_scale.capitalize()}")
+        print(f"\n {value:.2f}° {from_scale.capitalize()} is equal to {result:.2f}° {to_scale.capitalize()}")
     except ValueError as e:
-        print("❌ Error:", e)
+        print(" Error:", e)
 
 if __name__ == "__main__":
     main()
